@@ -4,6 +4,29 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.inline-plz {
+    display: inline;
+}
+
+.icon-img {
+    height: 120px;
+    width: 120px;
+    margin: 20px;
+    display: inline-block;
+}
+
+ul>li {
+    text-indent: 28px;
+}
+
+#infoWindow {
+    width: 100%;
+}
+
+#infoWindow h3 {
+    width: 90%;
+}
+
 .clearfix {
   overflow: auto;
 }
@@ -66,7 +89,7 @@ h2, h3, h4, h5 {
 
 }
 
-p {
+p, li {
   font-size: 14px;
   color: #333333;
   line-height: 21px;
@@ -77,6 +100,7 @@ a {
   text-decoration: none;
   margin-top: 10px;
   display: block;
+  max-width: 100%;
 }
 
 .welcome-message {

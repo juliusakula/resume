@@ -86,6 +86,8 @@ function logClicks(x,y) {
 
 $(document).click(function(loc) {
   // your code goes here!
+  console.log(loc);
+  logClicks(loc.pageX, loc.pageY);
 });
 
 
@@ -171,6 +173,15 @@ function initializeMap() {
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
+      map.setZoom(8);
+      map.setCenter(marker.getPosition());
+      
+      var infoWindow = new google.maps.InfoWindow();
+      infoWindow.setContent("<div id='infoWindow' class='container'><h3>"+name+"</h2></div>");
+      infoWindow.setPosition(marker.position);
+      infoWindow.open(map);
+      
+      console.log(placeData);
     });
 
     // this is where the pin actually gets added to the map.
@@ -178,7 +189,6 @@ function initializeMap() {
     bounds.extend(new google.maps.LatLng(lat, lon));
     // fit the map to the new marker
     map.fitBounds(bounds);
-    // center the map
     map.setCenter(bounds.getCenter());
   }
 
