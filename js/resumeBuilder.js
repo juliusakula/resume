@@ -2,7 +2,7 @@ var bio = {
     name: "Justin Murdock",
     role: "Junior Web Developer",
     contacts: {
-        mobile: "1-555-123-5555", skype: 'justin-murdock',
+        mobile: "1-555-123-5555",
         email: "jmurdock-resume@im.uptilt.com",
         github: "https://github.com/juliusakula",
         twitter: "https://twitter.com/JuicetinMurdock",
