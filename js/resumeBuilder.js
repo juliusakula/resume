@@ -1,12 +1,12 @@
 var bio = {
     name: "Justin Murdock",
-    role: "Junior Web Developer",
+    role: "Junior<span class=\"orange-text\">Web Developer</span>",
     contacts: {
+        twitter: "https://twitter.com/JuicetinMurdock",
+        location: "Berkeley, CA, USA",
         mobile: "1-555-123-5555",
         email: "jmurdock-resume@im.uptilt.com",
-        github: "https://github.com/juliusakula",
-        twitter: "https://twitter.com/JuicetinMurdock",
-        location: "Berkeley, CA, USA"
+        github: "https://github.com/juliusakula"
     },
     welcomeMessage: "Welcome to my Interactive Resume!",
     skills: ["Javascript", "Grunt", "PHP / HTML / CSS", "MySQL", "Node.js", "Angular.js"],
@@ -47,16 +47,16 @@ var work = {
             title: 'Junior Web Developer',
             location: 'Emeryville, CA, USA',
             dates: 'October 2013 - Present',
-            description: '<ul><li>While on the <b>Quality Assurance Team</b> I held the record for most test cases written in one day, myself only knowing programming for less than 4 months, competing against the team in India for that record. My mentor during this time helped me a great deal with seeing things from a higher level, and the importance of communication. </li>'+
-            '<li>While on the <b>Product Engineering Team</b> I wrote a PHP Data Access Object Library that read from a configuration file in order to query a database or series of similar databases and return the results as one set. By creating this seperation of concerns between data access and data stores, scripts could be stored in any version control system without including passwords by simply omitting the password file. It was a front-end agnostic library, so the data could be viewed in any way imaginable.</li>'+
-            '<li>While on the <b>Deliverability Team</b>, I learned practical Git, HTML, CSS, Javascript, JQuery, Angular.JS, Node.JS, Grunt, and User Interface Design. My first task was to refine ETL (Extract, Transform, Load) scripts already in the Deliverability Team\'s repertiour by using my Data Access Object PHP Libraries from my time in Product Engineering. I combined these tools into an API and also wrote a robust fluid front end tool set for the Deliverability Team to use, featuring <a class="inline-plz" href="http://ui-grid.info/">angular-ui/ui-grid</a> and AJAX. </li></ul>' 
+            description: '<ul><li>While on the <i>Quality Assurance Team</i> I wrote testcases for our product and held the record for most test cases written in one day, myself only knowing programming for less than 4 months, competing against the team in India for that record. My mentor during this time helped me a great deal with seeing things from a higher level, and the importance of communication. </li>'+
+            '<li>While on the <i>Product Engineering Team</i> I wrote a PHP Data Access Object library that read from a configuration file in order to query a database or series of similar databases and return the results as one set. By creating this seperation of concerns between data access and data stores, scripts could be stored in any version control system without including passwords by simply omitting the password file. It was a front-end agnostic library, so the data could be viewed in any way. It was used to write better billing scripts, among other things.</li>'+
+            '<li>While on the <i>Deliverability Team</i>, I learned practical Git, HTML & CSS, Javascript, Angular.JS, Node.JS, Grunt, and User Interface Design. My first task was to refine ETL (Extract, Transform, Load) scripts already in the Deliverability Team\'s repertiour by using my Data Access Object PHP libraries. I combined the refined tools into an API and also wrote a robust fluid front end tool set for the Deliverability Team to use, featuring <a class="inline-plz" href="http://ui-grid.info/">angular-ui/ui-grid</a> and AJAX.</li></ul>' 
         },
         {
             employer: 'Ponderosa Farms, Inc',
             title: 'Farmhand',
             location: 'Murray, KY, USA',
             dates: 'March 2007 - August 2013',
-            description: '<ul><li>At a very young age I began working on my family\'s farm. By my late teens I was doing essential tasks around my family\'s farm including being on the <a  class="inline-plz" href="https://www.youtube.com/watch?v=GzAdSxeyIY4">seining team</a>, driving boats and tractors, laying irrigation pipes and helping install irrigation equipment.</li></ul>'
+            description: '<ul><li>At a very young age I began working on my family\'s farm. By my late teens I was doing essential tasks around my family\'s farm including being a part of <a class="inline-plz" href="https://www.youtube.com/watch?v=GzAdSxeyIY4">the seining crew</a>, driving boats and tractors, laying irrigation pipes and helping install irrigation equipment.</li></ul>'
         }
     ],
     display: function(){
@@ -89,7 +89,7 @@ var projects = {
         },
         {
             title: 'Bitcoin Mining',
-            dates: 'November 2013',
+            dates: 'November 2013 - February 2014',
             description: '<ul><li>During the Bitcoin bubbled of 2013 where BTC was valued over $1000, I mined more than 3.5 BTC with a computer I built for mining. The mined BTC paid for the multi-GPU mining computer twice over. I also learned a lot about cryptography in the process, and helped a few friends mine on their computers and on the cloud. In addition to mining at home, I mined on cloud mining websites and on Amazon Web Service VMs.</li></ul>',
             images: ['images/small_hung_up.jpg','images/small_on_table.jpg']
             
@@ -148,6 +148,12 @@ var education = {
             school: 'University of New Mexico',
             date: 'September 2014',
             url: 'https://www.coursera.org/account/accomplishments/records/dZVr8KxqgpTbzaF5'
+        },
+        {
+            title: 'Courses Completed',
+            school: 'Code School',
+            date: '2014 - Present',
+            url: 'https://www.codeschool.com/users/juliusakula'
         }
     ],
     display: function(){
@@ -157,7 +163,7 @@ var education = {
             onlineArray = [];
             
         $.each(this.schools, function(key, val){
-            var formattedSchoolName = HTMLschoolName.replace('%data%', val.name),
+            var formattedSchoolName = HTMLschoolName.replace('#', val.url).replace('%data%', val.name),
                 formattedSchoolDegree = HTMLschoolDegree.replace('%data%', val.degree),
                 formattedSchoolDates = HTMLschoolDates.replace('%data%', val.dates),
                 formattedSchoolLocation = HTMLschoolLocation.replace('%data%', val.location);
@@ -176,10 +182,10 @@ var education = {
             var formattedOnlineCoursesTitle = HTMLonlineTitle.replace('#', val.url).replace('%data%', val.title),
                 formattedOnlineCoursesSchool = HTMLonlineSchool.replace('%data%', val.school),
                 formattedOnlineCoursesDate = HTMLonlineDates.replace('%data%', val.date),
-                formattedOnlineCoursesUrl = HTMLonlineURL.replace('#', val.url).replace('%data%', val.url);
+                formattedOnlineCoursesUrl = HTMLonlineURL.replace('#"', val.url + "\" style=\"display:none;\"").replace('%data%', val.url);
             onlineArray[key] =  formattedOnlineCoursesTitle + formattedOnlineCoursesSchool + formattedOnlineCoursesDate + formattedOnlineCoursesUrl;
         });
-        $('#education').append(HTMLonlineClasses);
+        $('#education').append('<br>' +HTMLonlineClasses);
         $.each(onlineArray, function(key, val){
             $("#education").append(HTMLschoolStart.replace('%data%', onlineArray[key]));
         });
@@ -193,3 +199,5 @@ projects.display();
 education.display();
 
 $('#mapDiv').append(googleMap);
+$('#footerContacts').append($('#topContacts').clone());
+$('#letsConnect h2').wrap( "<a href='https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&screen_name=JuicetinMurdock&tw_p=followbutton'></a>" );
