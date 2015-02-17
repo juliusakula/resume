@@ -39,6 +39,9 @@ var bio = {
         $("#header").append(formattedWelcomeMsg);
         $("#header").append(formattedSkillsStart);
         $('#skillsH3 + ul').append(formattedSkills).css('display', 'inline-block');
+        $('#footerContacts').append($('#topContacts').clone());
+        $('#letsConnect h2').wrap( "<a href='https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&screen_name=JuicetinMurdock&tw_p=followbutton'></a>" );
+        $('#mapDiv').append(googleMap); //Didn't quite know which display function this belonged in, but "Biography" seems right.
     }
 }
 var work = {
@@ -192,7 +195,3 @@ bio.display();
 work.display();
 projects.display();
 education.display();
-
-$('#mapDiv').append(googleMap);
-$('#footerContacts').append($('#topContacts').clone());
-$('#letsConnect h2').wrap( "<a href='https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&screen_name=JuicetinMurdock&tw_p=followbutton'></a>" );
