@@ -60,7 +60,7 @@ var work = {
             title: 'Farmhand',
             location: 'Murray, KY, USA',
             dates: 'March 2007 - August 2013',
-            description: '<ul><li>At a very young age I began working on my family\'s farm. By my late teens I was doing essential tasks around my family\'s farm including being a part of <a class="inline-plz" href="https://www.youtube.com/watch?v=GzAdSxeyIY4">the seining crew</a>, driving boats and tractors, laying irrigation pipes and helping install irrigation equipment.</li></ul>'
+            description: '<ul><li>At a very young age I began working on my family\'s farm. By my late teens I was doing essential tasks around my family\'s farm including being a part of <a class="inline-plz" href="https://www.youtube.com/watch?v=GzAdSxeyIY4">the seining crew</a>, driving boats and tractors, laying irrigation pipes and helping install irrigation equipment. I learned how to work together on a team - even if this job.</li><br></ul>'
         }
     ],
     display: function(){
