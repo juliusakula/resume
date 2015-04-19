@@ -96,11 +96,17 @@ var projects = {
         {
             title: 'Free Time Coding',
             dates: 'September 2013 - Future',
-            description: '<ul><li>While employed at Lyris, I was also learning to code in my free time. I have used <a class="inline-plz" href="https://www.coursera.org/">Coursera</a>, <a class="inline-plz" href="http://www.codecademy.com/">Code Academy</a> and <a class="inline-plz" href="https://www.codeschool.com/">Code School</a> to learn a wide variety of topics from Javascript to Ruby on Rails to Git. I took a coursera course on Ruby on Rails from the University of New Mexico and earned a <a class="inline-plz" href="https://www.coursera.org/account/accomplishments/certificate/7C3P4MSZZJ">verified certificate</a> with distinction. I completed the entire <a class="inline-plz" href="http://www.codecademy.com/en/tracks/php">PHP path</a> on Code Academy, and several entire <a class="inline-plz" href="https://www.codeschool.com/paths">paths on Code School</a> including <a class="inline-plz" href="https://www.codeschool.com/paths/html-css">HTML & CSS</a>, <a class="inline-plz" href="https://www.codeschool.com/paths/javascript">Javascript</a>, <a class="inline-plz" href="https://www.codeschool.com/paths/git">Git</a>, and <a class="inline-plz" href="https://www.codeschool.com/paths/electives">Electives</a>. I\'ve mastered four paths on Code School, with 29 courses and over  <a class="inline-plz" href="https://www.codeschool.com/users/juliusakula">1400 code challenges completed</a>.</li></ul>',
+            description: '<ul><li>While employed at Lyris, I was also learning to code in my free time. I have used Coursera, Code Academy, Code School and Udacity to learn a wide variety of topics from Javascript to Ruby on Rails to Git. I took a coursera course on Ruby on Rails from the University of New Mexico and earned <a class="inline-plz" href="https://www.coursera.org/account/accomplishments/certificate/7C3P4MSZZJ">my verified certificate</a> with distinction. I completed the entire PHP path on Code Academy, and several entire paths on Code School including HTML & CSS, Javascript, Git, and Electives. I\'ve mastered four paths on Code School, with 29 courses and over <a class="inline-plz" href="https://www.codeschool.com/users/juliusakula">1400 code challenges completed</a>.</li></ul>',
             images: ['https://d1tijy5l7mg5kk.cloudfront.net/assets/paths/badge-html-css-2bcd13b6f0e8092b6e4136a448ea3244.svg','https://d1tijy5l7mg5kk.cloudfront.net/assets/paths/badge-javascript-6d3dadcfccd99554cff7af219749573e.svg', 'https://d1tijy5l7mg5kk.cloudfront.net/assets/paths/badge-git-e1fad31eec7e3bd5ede23600b3e29808.svg', 'https://d1tijy5l7mg5kk.cloudfront.net/assets/paths/badge-electives-027e9b36116e380db027b189555dfb0d.svg']
 
-        }//TODO: add github projects from udacity.
-         //TODO: github game project add level counter. upon death, don't display alert but instead make player blink and reappear at starting location.
+        },
+        {
+            title: 'Javascript Game',
+            dates: 'March 2015',
+            description: '<ul><li>This game was part of my Udacity Nanodegree, I learned how to use HTML5 Canvas to make a mildly entertaining game similar to frogger. <a href="http://juliusakula.github.io/game" class="inline-plz">Click here</a> to play it, desktop only.</li></ul>',
+            images: ['http://juliusakula.github.io/game/images/char-boy.png', 'http://juliusakula.github.io/game/images/Key.png', 'http://juliusakula.github.io/game/images/Door.png']
+
+        }
     ],
     display: function(){
         var formattedProjectStart = HTMLprojectStart,
@@ -158,10 +164,22 @@ var education = {
             url: 'https://www.coursera.org/account/accomplishments/records/dZVr8KxqgpTbzaF5'
         },
         {
-            title: 'Courses Completed',
+            title: 'PHP',
+            school: 'Code Academy',
+            date: 'September 2013',
+            url: 'http://www.codecademy.com/Akulanite'
+        },
+        {
+            title: 'Report Card',
             school: 'Code School',
             date: '2014 - Present',
             url: 'https://www.codeschool.com/users/juliusakula'
+        },
+        {
+            title: 'Front-End Web Developer Nanodegree',
+            school: 'Udacity',
+            date: 'January 2015 - Present',
+            url: 'https://www.udacity.com/course/nd001'
         }
     ],
     display: function(){
@@ -202,9 +220,9 @@ var education = {
 };
 var summary = {
     paragraphs: [
-        "<li>I am a self-taught programmer with a passion for web development. If you are looking for someone who genuinely enjoys programming, here I am. I learn very quickly. My top skills are AngularJS, PHP, and MYSQL. I love open ended tasks where I can make decisions as to how to best complete the task in a scalable way. I also enjoy well defined tasks, which also sometimes force me to learn something new. When I learn something new, I obsess on the broader-level topic; I try to understand not only how to use a tool or technology, but what problem that tool or technology is trying to solve -- and why.</li>",
-        "<li>When I first learned programming, I learned Java, and I learned it through the lens of Object Oriented Programming. With this as my foundation, I taught myself PHP for work-related tasks. Around that time, I took an online coursera class on Ruby on Rails, and completed it with a grade of 98%. After that course, I never used Rails in practice but in that class I learned how the whole web stack works, which proved very valuable during my transition from back-end to full-stack engineer. Ruby is an excellent language, and no-matter what language I program in, I write as many Rubyisms as possible I try Ruby code. I'm highly productive at writing Javascript code, I know my tools.</li>",
-        "<li>I have more than a year of Experience in programming using all technologies to put together a web application. I code in my free time and have some <a href='#onlineClasses' class='inline-plz'>certifications</a>.</li>",
+        "<li>I am a self-taught programmer with a passion for web development. If you are looking for someone who genuinely enjoys programming, here I am. I learn very quickly. My top skills are AngularJS, PHP, and Web Application Architecture. I love open ended tasks where I can make decisions as to how to best complete the task in a scalable way. I also enjoy well defined tasks, which also sometimes force me to learn something new. When I learn something new, I obsess on the broader-level topic; I try to understand not only how to use a tool or technology, but what problem that tool or technology is trying to solve -- and why.</li>",
+        "<li>When I first learned programming, I learned Java, and I learned it through the lens of Object Oriented Programming. With this as my foundation, I taught myself PHP for work-related tasks. Around that time, I took a coursera class for Web Application Architecture with Ruby on Rails, and completed it with a grade of 98%. After that course, I never used Rails in practice but in that class I learned how the front end and back end work together, which proved very valuable during my transition from back-end to full-stack engineer.</li>",
+        "<li>I have more than a year of Experience in programming using all technologies to put together a web application. I code in my free time and have some <a href='#onlineClasses' class='inline-plz'>certifications</a>. I'm highly productive at writing code, I know my tools.</li>",
         "<br>"],
     display: function(){
         $("#summary").append("<div class='work-entry'><ul></ul></div>");
