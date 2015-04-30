@@ -1,5 +1,7 @@
 # The Resume Project
 
+# [View Justin's Resume Here](http://juliusakula.github.io/resume/)
+
 ## How do I complete this project?
 
 1. If you need a refresher on JavaScript syntax, go to the [Javascript Basics course](https://www.udacity.com/course/viewer#!/c-ud804-nd); if you would like to understand how this project is manipulating and traversing the DOM, check out [Intro to jQuery](https://www.udacity.com/course/ud245-nd).
