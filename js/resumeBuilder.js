@@ -4,19 +4,21 @@ var bio = {
     contacts: {
         twitter: "https://twitter.com/JuicetinMurdock",
         location: "Berkeley, CA, USA",
-        mobile: "1-555-123-5555",
-        email: "jmurdock-idontcheckthisemail@im.uptilt.com",
+        mobile: "1-(270)-227",
+        email: "justin.murdock96",
         github: "https://github.com/juliusakula",
         linkedin: "https://www.linkedin.com/profile/view?id=322687836"
     },
     welcomeMessage: "Welcome to my Interactive Resume!",
     skills: ["Javascript", "Grunt", "PHP / HTML / CSS", "MySQL", "Node.js", "Angular.js"],
     biopic: 'images/profile_pic.jpg',
+    biopicTwo: 'images/profile_pic2.png',
     display: function(){
         var formattedName = HTMLheaderName.replace("%data%", this.name),
             formattedContactMe = "",
             formattedRole = HTMLheaderRole.replace("%data%", this.role),
             formattedBioPic = HTMLbioPic.replace('%data%', this.biopic),
+            formattedBioPic2 = HTMLbioPic2.replace('%data%', this.biopicTwo),
             formattedWelcomeMsg = HTMLWelcomeMsg.replace('%data%', this.welcomeMessage),
             // make welcome message something that constantly changes like a text carousel
             formattedSkillsStart = HTMLskillsStart,
@@ -25,7 +27,22 @@ var bio = {
         //create string of html to replace %data% in contacts, applying template to each iteration
 
         $.each(this.contacts, function(key, val){
-            formattedContactMe += HTMLcontactGeneric.replace("%contact%", key).replace("%data%", val);
+            if(key === 'location'){
+                var str = '<span class="white-text">%data%</span>'.replace("%data%", val);
+                formattedContactMe += HTMLcontactGeneric.replace("%contact%", key).replace("%data%", str);
+            }
+            else if(key === 'mobile'){
+                var str = '<span class="white-text inline-plz phone">%data%</span>'.replace("%data%", val);
+                formattedContactMe += HTMLcontactGeneric.replace("%contact%", key).replace("%data%", str);
+            }
+            else if(key === 'email'){
+                var str = '<span class="white-text inline-plz gmail">%data%</span>'.replace("%data%", val);
+                formattedContactMe += HTMLcontactGeneric.replace("%contact%", key).replace("%data%", str);
+            }
+            else{
+                var str = '<a class="white-text inline-plz" href="%data%">%data%</a>'.replace("%data%", val).replace("%data%", val);
+                formattedContactMe += HTMLcontactGeneric.replace("%contact%", key).replace("%data%", str);
+            }
         });
         //create string of html to replace %data% in contacts, applying template to each iteration
 
@@ -37,6 +54,7 @@ var bio = {
         $("#header").prepend(formattedName);
         $("#topContacts").prepend(formattedContactMe);
         $("#header").append(formattedBioPic);
+        $("#header").append(formattedBioPic2);
         $("#header").append(formattedWelcomeMsg);
         $("#header").append(formattedSkillsStart);
         $('#skillsH3 + ul').append(formattedSkills).css('display', 'inline-block');
@@ -96,7 +114,7 @@ var projects = {
         {
             title: 'Free Time Coding',
             dates: 'September 2013 - Future',
-            description: '<ul><li>While employed at Lyris, I was also learning to code in my free time. I have used Coursera, Code Academy, Code School and Udacity to learn a wide variety of topics from Javascript to Ruby on Rails to Git. I took a coursera course on Ruby on Rails from the University of New Mexico and earned <a class="inline-plz" href="https://www.coursera.org/account/accomplishments/certificate/7C3P4MSZZJ">my verified certificate</a> with distinction. I completed the entire PHP path on Code Academy, and several entire paths on Code School including HTML & CSS, Javascript, Git, and Electives. I\'ve mastered four paths on Code School, with 29 courses and over <a class="inline-plz" href="https://www.codeschool.com/users/juliusakula">1400 code challenges completed</a>.</li></ul>',
+            description: '<ul><li>While employed at Lyris, I was also learning to code in my free time. I have used Coursera, Code Academy, Code School and Udacity to learn a wide variety of topics from Javascript to Ruby on Rails to Git. I took a coursera course on Ruby on Rails from the University of New Mexico and earned <a class="inline-plz" href="https://www.coursera.org/account/accomplishments/certificate/7C3P4MSZZJ">my verified certificate</a> with distinction. I completed the entire PHP path on Code Academy, and several entire paths on Code School including HTML & CSS, Javascript, Git, and Electives. I\'ve mastered four paths on Code School, with 32 courses and over <a class="inline-plz" href="https://www.codeschool.com/users/juliusakula">1500 code challenges completed</a>.</li></ul>',
             images: ['https://d1tijy5l7mg5kk.cloudfront.net/assets/paths/badge-html-css-2bcd13b6f0e8092b6e4136a448ea3244.svg','https://d1tijy5l7mg5kk.cloudfront.net/assets/paths/badge-javascript-6d3dadcfccd99554cff7af219749573e.svg', 'https://d1tijy5l7mg5kk.cloudfront.net/assets/paths/badge-git-e1fad31eec7e3bd5ede23600b3e29808.svg', 'https://d1tijy5l7mg5kk.cloudfront.net/assets/paths/badge-electives-027e9b36116e380db027b189555dfb0d.svg']
 
         },
@@ -105,6 +123,13 @@ var projects = {
             dates: 'March 2015',
             description: '<ul><li>This game was part of my Udacity Nanodegree, I learned how to use HTML5 Canvas to make a mildly entertaining game similar to frogger. <a href="http://juliusakula.github.io/game" class="inline-plz">Click here</a> to play it, desktop only.</li></ul>',
             images: ['http://juliusakula.github.io/game/images/char-boy.png', 'http://juliusakula.github.io/game/images/Key.png', 'http://juliusakula.github.io/game/images/Door.png']
+
+        },
+        {
+            title: 'Markdown Editor',
+            dates: 'May 2015',
+            description: '<ul><li>I could not find any useful resource for writing markdown documentation and seeing it render, so I put this together so that I could see my readme files rendered without needing to push them to github. <a href="http://juliusakula.github.io/editor/#/" class="inline-plz">See the project here</a></li></ul><br>',
+            images: []
 
         }
     ],
@@ -143,7 +168,7 @@ var education = {
             name: 'Berkeley City College',
             location: 'Berkeley, CA, USA',
             degree: 'General Education',
-            majors: ['--'],
+            majors: ['undeclared'],
             dates: 'August 2013 - December 2013',
             url: 'http://web.peralta.edu/blog/category/berkeley-city-college/'
         },
@@ -151,7 +176,7 @@ var education = {
             name: 'Murray State University',
             location: 'Murray, KY, USA',
             degree: 'General Education',
-            majors: ['--'],
+            majors: ['undeclared'],
             dates: 'January 2013 - June 2013',
             url: 'http://http://www.murraystate.edu/'
         }

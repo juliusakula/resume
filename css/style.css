@@ -4,6 +4,18 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.orange-text + a {
+    text-decoration: underline;
+}
+
+.gmail:after {
+    content:"@gmail.com"
+}
+
+.phone:after{
+    content: "-7404"
+}
+
 .inline-plz {
     display: inline;
 }
@@ -170,6 +182,10 @@ ul {
   display: none;
 }
 
+.biopicTwo {
+    float: right;
+}
+
 img {
   padding: 10px;
 }
@@ -206,6 +222,22 @@ span {
   }
 }
 
+@media only screen and (max-width:815px) {
+    .biopic {
+        float: left;
+    }
+}
+
+@media only screen and (max-width:580px) {
+    .biopic {
+        display: none !important;
+    }
+    .biopicTwo {
+        display: block !important;
+    }
+}
+
+
 @media only screen and (max-width: 750px) {
   #letsConnect {
     margin-top: 10%;
@@ -231,8 +263,9 @@ span {
   padding-bottom: 5%;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 220px) {
   #skillsH3,
+  .biopicTwo,
   .biopic {
     display: block;
   }
