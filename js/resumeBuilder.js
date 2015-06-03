@@ -1,6 +1,6 @@
 var bio = {
     name: "Justin Murdock",
-    role: "Junior<span class=\"orange-text\">Web Developer</span>",
+    role: "&nbsp;<span class=\"orange-text\">Full Stack Web Developer</span>",
     contacts: {
         twitter: "https://twitter.com/JuicetinMurdock",
         location: "Berkeley, CA, USA",
@@ -9,10 +9,10 @@ var bio = {
         github: "https://github.com/juliusakula",
         linkedin: "https://www.linkedin.com/profile/view?id=322687836"
     },
-    welcomeMessage: "Welcome to my Interactive Resume!",
-    skills: ["Javascript", "Grunt", "PHP / HTML / CSS", "MySQL", "Node.js", "Angular.js"],
+    welcomeMessage: "Welcome to my Responsive Resume!",
+    skills: ["Angular.js", "Grunt", "PHP" , "HTML & CSS", "SQL"],
     biopic: 'images/profile_pic.jpg',
-    biopicTwo: 'images/profile_pic2.png',
+    biopicTwo: 'images/profile_pic_small.png',
     display: function(){
         var formattedName = HTMLheaderName.replace("%data%", this.name),
             formattedContactMe = "",
@@ -57,7 +57,7 @@ var bio = {
         $("#header").append(formattedBioPic2);
         $("#header").append(formattedWelcomeMsg);
         $("#header").append(formattedSkillsStart);
-        $('#skillsH3 + ul').append(formattedSkills).css('display', 'inline-block');
+        $('#skills').append(formattedSkills);
         $('#footerContacts').append($('#topContacts').clone());
         $('#letsConnect h2').wrap( "<a href='https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&screen_name=JuicetinMurdock&tw_p=followbutton'></a>" );
         $('#mapDiv').append(googleMap); //Didn't quite know which display function this belonged in, but "Biography" seems right.

@@ -27,10 +27,6 @@
     display: inline-block;
 }
 
-ul>li {
-    text-indent: 28px;
-}
-
 #infoWindow {
     width: 100%;
 }
@@ -125,6 +121,7 @@ a {
 #skillsH3 {
   color: #F5AE23;
   display: none;
+  padding: 10px 0 0 0 !important;
 }
 
 .orange {
@@ -210,6 +207,20 @@ span {
   text-align: center;
 }
 
+#name {
+    white-space: nowrap;
+}
+#role {
+    white-space: normal;
+}
+
+ul > li {
+    text-indent: 28px;
+}
+#skills > li {
+    text-indent: 0;
+}
+
 @media only screen and (max-width: 1024px) {
   #letsConnect {
     margin-top: 5%;
@@ -217,8 +228,9 @@ span {
 }
 
 @media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
+  .biopic, .biopicTwo {
+    width: 170px;
+    height: 170px;
   }
 }
 
@@ -241,9 +253,6 @@ span {
 @media only screen and (max-width: 750px) {
   #letsConnect {
     margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
   }
   .welcome-message {
     display: none;
@@ -269,4 +278,15 @@ span {
   .biopic {
     display: block;
   }
+}
+
+@media only screen and (max-width: 555px) {
+    #role {
+        display: block;
+        text-align: center;
+    }
+    #name {
+        display: block;
+        text-align: center;
+    }
 }
