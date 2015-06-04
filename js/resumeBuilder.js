@@ -115,7 +115,7 @@ var projects = {
             title: 'Free Time Coding',
             dates: 'September 2013 - Future',
             description: '<ul><li>While employed at Lyris, I was also learning to code in my free time. I have used Coursera, Code Academy, Code School and Udacity to learn a wide variety of topics from Javascript to Ruby on Rails to Git. I took a coursera course on Ruby on Rails from the University of New Mexico and earned <a class="inline-plz" href="https://www.coursera.org/account/accomplishments/certificate/7C3P4MSZZJ">my verified certificate</a> with distinction. I completed the entire PHP path on Code Academy, and several entire paths on Code School including HTML & CSS, Javascript, Git, and Electives. I\'ve mastered four paths on Code School, with 32 courses and over <a class="inline-plz" href="https://www.codeschool.com/users/juliusakula">1500 code challenges completed</a>.</li></ul>',
-            images: ['https://d1tijy5l7mg5kk.cloudfront.net/assets/paths/badge-html-css-2bcd13b6f0e8092b6e4136a448ea3244.svg','https://d1tijy5l7mg5kk.cloudfront.net/assets/paths/badge-javascript-6d3dadcfccd99554cff7af219749573e.svg', 'https://d1tijy5l7mg5kk.cloudfront.net/assets/paths/badge-git-e1fad31eec7e3bd5ede23600b3e29808.svg', 'https://d1tijy5l7mg5kk.cloudfront.net/assets/paths/badge-electives-027e9b36116e380db027b189555dfb0d.svg']
+            images: ['images/javascript.svg', 'images/git.svg', 'images/htmlcss.svg', 'images/electives.svg']
 
         },
         {
