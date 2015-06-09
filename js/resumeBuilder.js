@@ -189,10 +189,10 @@ var education = {
             url: 'https://www.coursera.org/account/accomplishments/records/dZVr8KxqgpTbzaF5'
         },
         {
-            title: 'PHP',
-            school: 'Code Academy',
-            date: 'September 2013',
-            url: 'http://www.codecademy.com/Akulanite'
+            title: 'Front-End Web Developer Nanodegree',
+            school: 'Udacity',
+            date: 'January 2015 - May 2015',
+            url: 'http://juliusakula.github.io/certificates/Front%20End%20Web%20Developer%20Nanodegreee%20Completion.pdf'
         },
         {
             title: 'Report Card',
@@ -201,10 +201,16 @@ var education = {
             url: 'https://www.codeschool.com/users/juliusakula'
         },
         {
-            title: 'Front-End Web Developer Nanodegree',
-            school: 'Udacity',
-            date: 'January 2015 - Present',
-            url: 'https://www.udacity.com/course/nd001'
+            title: 'PHP',
+            school: 'Code Academy',
+            date: 'September 2013',
+            url: 'http://www.codecademy.com/Akulanite'
+        },
+        {
+            title: 'Computer Science',
+            school: 'Khan Academy',
+            date: 'May 2015 - Present',
+            url: 'https://www.khanacademy.org/profile/kaid_1014213145833324178246200/'
         }
     ],
     display: function(){
