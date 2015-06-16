@@ -3,7 +3,7 @@ var bio = {
     role: "&nbsp;<span class=\"orange-text\">Full Stack Web Developer</span>",
     contacts: {
         twitter: "https://twitter.com/JuicetinMurdock",
-        location: "Berkeley, CA, USA",
+        location: "Ellensburg, WA, USA",
         mobile: "1-(270)-227",
         email: "justin.murdock96",
         github: "https://github.com/juliusakula",
